@@ -9,7 +9,7 @@ const flightRoutes = require('./routes/flightRoutes')
 const bookingRoutes = require('./routes/bookingRoutes')
 
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3000
 
 const dns = require('dns');
 dns.setServers(['8.8.8.8', '1.1.1.1']);
@@ -22,10 +22,10 @@ app.use(cors())
 app.use(express.json())
 app.use(logger('dev'))
 
-app.use('/auth', authRoutes)
-app.use('/users', userRoutes)
-app.use('/flights', flightRoutes)
-app.use('/bookings', bookingRoutes)
+// app.use('/auth', authRoutes)
+// app.use('/users', userRoutes)
+// app.use('/flights', flightRoutes)
+// app.use('/bookings', bookingRoutes)
 
 
 app.listen(PORT, () => {

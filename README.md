@@ -34,7 +34,7 @@
 ***
 ### ***Wireframe***
 
-![ERD](#)
+![Wireframe](#)
 ***
 
 ### ***Getting Started***

@@ -71,3 +71,4 @@
 
 ##### - [Lucidchart](https://lucid.app/) - Used for creating the Hierarchy Diagram.
 
+##### - [Figma](https://www.figma.com/) - Used for creating the Wireframes.

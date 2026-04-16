@@ -22,8 +22,8 @@ app.use(cors())
 app.use(express.json())
 app.use(logger('dev'))
 
-// app.use('/auth', authRoutes)
-// app.use('/users', userRoutes)
+ app.use('/auth', authRoutes)
+ app.use('/users', userRoutes)
 // app.use('/flights', flightRoutes)
 // app.use('/bookings', bookingRoutes)
 

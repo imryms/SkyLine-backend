@@ -1,60 +1,54 @@
-# SkyLine-backend
-# 🛬 SkyLine - Flight Booking Platform
+# healthcare-donation-platform
 
-## Date: 15/04/2026
+## Date: 26/02/2026
 
-### By: Maryam Altammam - Zainab Aljad - Fatema BuSharar
+### By: Zainab Aljad - Fatema BuSharar
 
-#### [Website](#)
-#### [Maryam's GitHub](https://github.com/imryms) | [Zainab's GitHub](https://github.com/Zaljad) | [Fatema's GitHub](https://github.com/FatemaBuSharar) |
-#### [Maryam's LinkedIn](https://www.linkedin.com/in/maryam-altammam/) | [Zainabs's LinkedIn](https://www.linkedin.com/in/zainabaljad/) | [Fatema's LinkedIn](https://www.linkedin.com/in/fatemabusharar/) |
+#### [Website](#) | [Zainab's GitHub](https://github.com/Zaljad) | [Fatema's GitHub](https://github.com/FatemaBuSharar) | [Zainabs's LinkedIn](https://www.linkedin.com/in/zainabaljad/) | [Fatema's LinkedIn](https://www.linkedin.com/in/fatemabusharar/)
 ***
 
 ### ***Description***
-#### SkyLine is a Full-stack flight booking platform. It allows users to search for flights, manage their reservations, and update booking details seamlessly using the MERN stack.
+#### A web platform for donating medical equipment. Users can submit items with condition details. Admins review submissions, and approved items are displayed for those in need.
 ***
 
 ### ***Technologies Used***
-* Frontend: React.js & Axios.
-* Backend: Node.js & Express.
-* Database: MongoDB & Mongoose.
-* Styling: CSS
+* Node.js
+* Express.js
+* MongoDB
+* EJS
+* JavaScript
+* JSON
 ***
-### 🔗 Project Links
 
-- **Frontend Repository:** [[ Frontend Repo ](https://github.com/imryms/SkyLine)]
-***
-### ***Hierarchy Diagram***
-![Hierarchy Diagram](/Images/SkyLine%20Hierarchy%20Diagram.png)
-***
-### ***ERD***
+### ***RED***
 
 
-![ERD](#)
-***
-### ***Wireframe***
-
-![ERD](#)
+![RED](/images/RED.jpeg)
 ***
 
 ### ***Getting Started***
 
-##### Search, Book, and Manage your flights with ease ✈️.
-
-##### The project was deployed and can be viewed [here](#).
+##### Create a new account or log in to start exploring the different sections of the website.
+##### A Trello board was used to keep track of development progress and can be viewed [here](URL).
+##### The project was deployed and can be viewed [here](URL).
 ***
 
 ### ***Screenshots***
 
-##### Home page
+##### image header 1
 ![image](#)
 
-##### Booking page
+##### image header 2
 ![image](#)
-
-##### MyBooking page
-![image](#)
-
 ***
 
+### ***Future Updates***
+
+- [ ] Add a rental system for medical equipment
+- [ ] Map Integration
+***
+
+### ***Credits***
+
+##### - [Lucidchart](https://lucid.app/) - Used for creating the Hierarchy Diagram.[Lucidchart]
 

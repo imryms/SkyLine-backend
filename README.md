@@ -30,8 +30,7 @@
 ***
 ### ***ERD***
 
-![ERD](/Images/ERD-SkyLine.jpg
-)
+![ERD]()
 ***
 ### ***Wireframe***
 ![Wireframe](/Images/Wireframe.png)

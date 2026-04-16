@@ -8,13 +8,9 @@
 ***
 
 ### ***Description***
-<<<<<<< HEAD
-#### A web platform for donating medical equipment. Users can submit items with condition details. Admins review submissions, and approved items are displayed for those in need.
-=======
 #### SkyLine is a Full-stack flight booking platform. It allows users to search for flights, manage their reservations, and update booking details seamlessly using the MERN stack.
 
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/oWfImqRq).
->>>>>>> 6d4bb4bf19f02a4ac5545a6e10aee640d8090087
 ***
 
 ### ***Technologies Used***

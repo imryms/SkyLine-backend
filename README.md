@@ -16,39 +16,48 @@
 ***
 
 ### ***Technologies Used***
-* Node.js
-* Express.js
-* MongoDB
-* EJS
-* JavaScript
-* JSON
+* Frontend: React.js & Axios.
+* Backend: Node.js & Express.
+* Database: MongoDB & Mongoose.
+* Styling: CSS
 ***
+### 🔗 Project Links
 
-### ***RED***
+- **Frontend Repository:** [[ Frontend Repo ](https://github.com/imryms/SkyLine)]
+***
+### ***Hierarchy Diagram***
+![Hierarchy Diagram](/Images/SkyLine%20Hierarchy%20Diagram.png)
+***
+### ***ERD***
 
 ![ERD](/Images/ERD-SkyLine.jpg)
 ***
 ### ***Wireframe***
-
 ![Wireframe](/Images/Wireframe.png)
 
+
 [Wireframe Link](https://www.figma.com/design/ciPSBZ5082UqWZQhGpL3di/Untitled?node-id=0-1&t=jVGd74pZ4mudLORG-1)
+
 ***
 
 ### ***Getting Started***
 
-##### Create a new account or log in to start exploring the different sections of the website.
-##### A Trello board was used to keep track of development progress and can be viewed [here](URL).
-##### The project was deployed and can be viewed [here](URL).
+##### Search, Book, and Manage your flights with ease ✈️.
+
+##### The project was deployed and can be viewed [here](#).
 ***
 
 ### ***Screenshots***
 
-##### image header 1
+##### Home page
 ![image](#)
 
-##### image header 2
+##### Booking page
 ![image](#)
+
+##### MyBooking page
+![image](#)
+
 ***
 
 ### ***Future Updates***

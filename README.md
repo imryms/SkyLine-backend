@@ -1,4 +1,3 @@
-# SkyLine-backend
 # 🛬 SkyLine - Flight Booking Platform
 
 ## Date: 15/04/2026
@@ -34,10 +33,11 @@
 ![ERD](/Images/ERD-SkyLine.jpg)
 ***
 ### ***Wireframe***
-
 ![Wireframe](/Images/Wireframe.png)
 
+
 [Wireframe Link](https://www.figma.com/design/ciPSBZ5082UqWZQhGpL3di/Untitled?node-id=0-1&t=jVGd74pZ4mudLORG-1)
+
 ***
 
 ### ***Getting Started***

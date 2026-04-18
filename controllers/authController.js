@@ -12,7 +12,7 @@ const Register = async (req, res) => {
       phoneNumber
     } = req.body
 
-    if (!fullName || !email || !password || !confirmPassword) {
+    if (!fullName || !email || !password || !confirmPassword || !phoneNumber) {
       return res.status(400).send({ msg: 'Please fill all required fields' })
     }
 

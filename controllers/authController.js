@@ -9,9 +9,7 @@ const Register = async (req, res) => {
       email,
       password,
       confirmPassword,
-      phoneNumber,
-      passportNumber,
-      nationality
+      phoneNumber
     } = req.body
 
     if (!fullName || !email || !password || !confirmPassword) {
@@ -34,9 +32,7 @@ const Register = async (req, res) => {
       fullName,
       email,
       password: hashedPassword,
-      phoneNumber,
-      passportNumber,
-      nationality
+      phoneNumber
     })
 
     user.password = undefined

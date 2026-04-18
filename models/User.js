@@ -22,12 +22,6 @@ const userSchema = new mongoose.Schema(
       type: String,
       enum: ['traveler', 'admin'],
       default: 'traveler'
-    },
-    passportNumber: {
-      type: String
-    },
-    nationality: {
-      type: String
     }
   },
   { timestamps: true }

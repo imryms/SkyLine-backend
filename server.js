@@ -28,7 +28,9 @@ app.use("/auth", authRoutes)
 app.use("/users", userRoutes)
 app.use("/flights", flightRoutes)
 app.use("/airLines", airLineRoutes)
-// app.use('/bookings', bookingRoutes)
+app.use('/bookings', bookingRoutes)
+
+
 
 app.listen(PORT, () => {
   console.log(`Skyline Running on port ${PORT}🛬`)

@@ -35,12 +35,26 @@ const Register = async (req, res) => {
       phoneNumber
     })
 
-    user.password = undefined
+    const payload = {
+      id: user._id,
+      email: user.email,
+      role: user.role
+    }
 
-    res.status(201).send(user)
+    const token = middleware.createToken(payload)
+
+    res.status(201).send({
+      token,
+      user: {
+        id: user._id,
+        fullName: user.fullName,
+        email: user.email,
+        role: user.role
+      }
+    })
   } catch (error) {
-  console.log(error)
-  res.status(500).send({ msg: error.message })
+    console.log(error)
+    res.status(500).send({ msg: error.message })
   }
 }
 

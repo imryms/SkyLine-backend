@@ -9,12 +9,10 @@ const Register = async (req, res) => {
       email,
       password,
       confirmPassword,
-      phoneNumber,
-      passportNumber,
-      nationality
+      phoneNumber
     } = req.body
 
-    if (!fullName || !email || !password || !confirmPassword) {
+    if (!fullName || !email || !password || !confirmPassword || !phoneNumber) {
       return res.status(400).send({ msg: 'Please fill all required fields' })
     }
 
@@ -34,9 +32,7 @@ const Register = async (req, res) => {
       fullName,
       email,
       password: hashedPassword,
-      phoneNumber,
-      passportNumber,
-      nationality
+      phoneNumber
     })
 
     user.password = undefined

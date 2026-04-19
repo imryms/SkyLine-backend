@@ -26,7 +26,7 @@ const getFlightById = async (req, res) => {
     }
   res.status(200).json(flight)
   } catch (error) {
-    res.status(500).json(`Error fining flights with this airLainId ${error.message}`)
+    res.status(500).json(`Error finding flights with this airLainId ${error.message}`)
   }
 }
 

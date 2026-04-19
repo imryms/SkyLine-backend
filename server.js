@@ -20,22 +20,13 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(logger("dev"))
-<<<<<<< HEAD
 
 app.use("/auth", authRoutes)
 app.use("/users", userRoutes)
 app.use("/flights", flightRoutes)
 app.use("/bookings", bookingRoutes)
 
-=======
 
-
-app.use("/flights", flightRoutes)
-app.use("/auth", authRoutes)
-app.use("/users", userRoutes)
-// app.use('/bookings', bookingRoutes)
-
->>>>>>> 07b6b345d2f0fc2448326ddb00ed798757aef48a
 app.listen(PORT, () => {
   console.log(`Skyline Running on port ${PORT}🛬`)
 })

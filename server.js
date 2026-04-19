@@ -6,6 +6,7 @@ const cors = require("cors")
 const authRoutes = require("./routes/authRoutes")
 const userRoutes = require("./routes/userRoutes")
 const flightRoutes = require("./routes/flightRoutes")
+const airLineRoutes = require("./routes/airLineRoutes")
 const bookingRoutes = require("./routes/bookingRoutes")
 
 const PORT = process.env.PORT || 3000
@@ -21,10 +22,14 @@ app.use(cors())
 app.use(express.json())
 app.use(logger("dev"))
 
+
+
 app.use("/auth", authRoutes)
 app.use("/users", userRoutes)
 app.use("/flights", flightRoutes)
-app.use("/bookings", bookingRoutes)
+app.use("/airLines", airLineRoutes)
+app.use('/bookings', bookingRoutes)
+
 
 
 app.listen(PORT, () => {

@@ -30,6 +30,9 @@ app.use("/flights", flightRoutes)
 app.use("/airLines", airLineRoutes)
 app.use('/bookings', bookingRoutes)
 
+app.get("/", (req, res) => {
+  res.send("Skyline is running ✈️")
+})
 
 
 app.listen(PORT, () => {

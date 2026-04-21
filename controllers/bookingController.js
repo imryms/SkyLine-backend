@@ -3,7 +3,7 @@ const Flight = require("../models/Flight")
 
 const createBooking = async (req, res) => {
   try {
-    const { userID, flightID, ticketType, passengerType, quantity } = req.body
+    const { userID, flightID, ticketType, passengers } = req.body
 
     const flight = await Flight.findById(flightID)
     if (!flight) {
@@ -15,18 +15,22 @@ const createBooking = async (req, res) => {
     else if (ticketType === "Business") basePrice = flight.prices.business
     else basePrice = flight.prices.firstClass
 
-    let factor = 1
-    if (passengerType === "Child") factor = 0.75
-    else if (passengerType === "Infant") factor = 0.1
+    let totalPrice = 0
 
-    const totalPrice = basePrice * factor * quantity
+    passengers.forEach((p) => {
+      let factor = 1
+
+      if (p.type === "Kids") factor = 0.75
+      else if (p.type === "Infant") factor = 0.1
+
+      totalPrice += basePrice * factor * p.quantity
+    })
 
     const booking = new Booking({
       userID,
       flightID,
       ticketType,
-      passengerType,
-      quantity,
+      passengers,
       totalPrice,
     })
 
@@ -34,7 +38,7 @@ const createBooking = async (req, res) => {
 
     res.status(201).json(booking)
   } catch (error) {
-    res.status(400).send(`Error creating a Booking, ${error.message}`)
+    res.status(500).send(error.message)
   }
 }
 

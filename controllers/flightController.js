@@ -11,7 +11,7 @@ const createFlight = async (req, res) => {
 
 const getAllFlights = async (req, res) => {
   try {
-    const flights = await Flight.find().populate('airLineId')
+    const flights = await Flight.find().populate('airLineCode')
     res.status(200).json(flights)
   } catch (error) {
     res.status(500).json(`Error getting flights ${error.message}`)
@@ -20,7 +20,7 @@ const getAllFlights = async (req, res) => {
 
 const getFlightById = async (req, res) => {
   try {
-    const flight = await Flight.findById(req.params.id).populate('airLineId')
+    const flight = await Flight.findById(req.params.id).populate('airLineCode')
     if(!flight){
       return res.status(404).json({message: "Flight not found!"})
     }

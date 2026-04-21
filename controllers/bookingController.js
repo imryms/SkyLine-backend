@@ -5,15 +5,31 @@ const createBooking = async (req, res) => {
   try {
     const { userID, flightID, ticketType, passengers } = req.body
 
+    if (!userID || !flightID || !ticketType || !passengers) {
+      return res.status(400).json({ error: "Missing required fields" })
+    }
+
     const flight = await Flight.findById(flightID)
     if (!flight) {
       return res.status(404).send("Flight not found")
     }
+    if (!flight.price) {
+      return res.status(500).json({ error: "Flight price data is missing" })
+    }
 
-    let basePrice
-    if (ticketType === "Economy") basePrice = flight.prices.economy
-    else if (ticketType === "Business") basePrice = flight.prices.business
-    else basePrice = flight.prices.firstClass
+    const priceMap = {
+      Economy: flight.price.economy,
+      Business: flight.price.business,
+      "First Class": flight.price.firstClass,
+    }
+
+    const basePrice = priceMap[ticketType]
+
+    if (basePrice === undefined || basePrice === null) {
+      return res
+        .status(400)
+        .json({ error: `Invalid ticket type: ${ticketType}` })
+    }
 
     let totalPrice = 0
 
@@ -21,10 +37,12 @@ const createBooking = async (req, res) => {
       let factor = 1
 
       if (p.type === "Kids") factor = 0.75
-      else if (p.type === "Infant") factor = 0.1
+      else if (p.type === "Infant") factor = 0.2
 
       totalPrice += basePrice * factor * p.quantity
     })
+
+    totalPrice = Math.round(totalPrice * 100) / 100
 
     const booking = new Booking({
       userID,
@@ -32,6 +50,7 @@ const createBooking = async (req, res) => {
       ticketType,
       passengers,
       totalPrice,
+      pricePerTicket: basePrice,
     })
 
     await booking.save()
@@ -65,7 +84,16 @@ const getBookingById = async (req, res) => {
       return res.status(404).send("Booking not found")
     }
 
-    res.json(booking)
+    const flight = booking.flightID
+    const priceMap = {
+      Economy: flight.price.economy,
+      Business: flight.price.business,
+      "First Class": flight.price.firstClass,
+    }
+
+    const pricePerTicket = priceMap[booking.ticketType]
+
+    res.json({ ...booking.toObject(), pricePerTicket })
   } catch (error) {
     res.status(500).send(`Error getting booking, ${error.message}`)
   }

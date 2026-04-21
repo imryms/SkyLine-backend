@@ -13,22 +13,27 @@ const bookingSchema = new mongoose.Schema(
       ref: "Flight",
       required: true,
     },
+
     ticketType: {
       type: String,
       enum: ["Economy", "Business", "First Class"],
       required: true,
     },
-    passengerType: {
-      type: String,
-      enum: ["Infant", "Kids", "Adults"],
-      required: true,
-    },
 
-    quantity: {
-      type: Number,
-      min: 1,
-      required: true,
-    },
+    passengers: [
+      {
+        type: {
+          type: String,
+          enum: ["Infant", "Kids", "Adults"],
+          required: true,
+        },
+        quantity: {
+          type: Number,
+          min: 1,
+          required: true,
+        },
+      },
+    ],
 
     totalPrice: {
       type: Number,

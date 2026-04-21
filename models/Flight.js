@@ -5,7 +5,7 @@ const flightSchema = new mongoose.Schema({
     type: String,
     required: true},
 
-  airLineId:{
+  airLineCode:{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'AirLine',
     required: true

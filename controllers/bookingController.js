@@ -63,7 +63,13 @@ const createBooking = async (req, res) => {
 
 const getAllBookings = async (req, res) => {
   try {
-    const bookings = await Booking.find()
+    const filter = {}
+
+    if (req.query.userID) {
+      filter.userID = req.query.userID
+    }
+
+    const bookings = await Booking.find(filter)
       .populate("userID")
       .populate("flightID")
       .sort({ createdAt: -1 })
